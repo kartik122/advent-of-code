@@ -1,7 +1,6 @@
 use std::fs;
 
 fn check(report: Vec<i32>, i: usize) -> bool {
-    print!("IN THE FUNCTION : {} {} {} \n", report[i], report[i+1], report[i+2]);
     let diff: i32 = report[i] - report[i+1];
     if diff.abs() < 1 || diff.abs() > 3 {
         return false;
@@ -9,11 +8,8 @@ fn check(report: Vec<i32>, i: usize) -> bool {
     let mut flag: bool = true;
     let mut j: usize = i;
     while j < report.len() - 1 {
-        print!("IN THE LOOP : {} {} {} \n", report[j], report[j+1], diff);
         let new_diff: i32 = report[j] - report[j+1];
         if new_diff.abs() < 1 || new_diff.abs() > 3 || new_diff * diff < 0 {
-            print!("BREAKING \n {} +++++ {} ----- {} ===== {} \n", report[j], report[j+1], diff, new_diff);
-            print!("BREAKING \n");
             flag = false;
             break;
         }
@@ -22,7 +18,7 @@ fn check(report: Vec<i32>, i: usize) -> bool {
     flag
 }
 fn main() {
-    let input_file   = fs::read_to_string("/Users/kargupta8/Desktop/advent-of-code/dec2/src/input2.txt").unwrap();
+    let input_file   = fs::read_to_string("input2.txt").unwrap();
     let mut safe: i32 = 0;
     for line in input_file.lines() {
         let report: Vec<i32> = line.split(" ").map(|x| x.parse::<i32>().unwrap()).collect();
@@ -51,11 +47,8 @@ fn main() {
                 }
                 i += 1;
             }
-            if flag == true {
+            if flag == true 
                 safe += 1;
-            } else {
-                print!("UNSAFE = {} \n", line);
-            }
         }
     }
     println!("Safe: {}", safe);
