@@ -59,7 +59,7 @@ fn multiply_and_add(left_map: HashMap<i32, i32>, right_map: HashMap<i32, i32>) -
 }
 fn main() {
     println!("Hello, world!");
-    let contents = std::fs::read_to_string("/Users/kargupta8/Desktop/advent-of-code/2024/dec-1/dec1/src/input.txt").unwrap();
+    let contents = std::fs::read_to_string("input.txt").unwrap();
     let input: &str = &contents;
     let (left_map, right_map) = split_and_count(input);
     // print!("{}",calculate_difference(left_map, right_map));
