@@ -194,7 +194,7 @@ fn new_parse_tree(i: usize, j: usize, xmas_array: &Vec<Vec<char>>) -> bool {
 
 
 fn main() {
-    let input = fs::read_to_string("/Users/kargupta8/Desktop/advent-of-code/2024/dec-4/src/input2.txt").unwrap();
+    let input = fs::read_to_string("advent-of-code/2024/dec-4/src/input2.txt").unwrap();
     let mut xmas_array: Vec<Vec<char>> = Vec::new();
     for line in input.lines() {
         let line_vec: Vec<char> = line.chars().collect();
