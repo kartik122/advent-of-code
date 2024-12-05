@@ -17,7 +17,7 @@ fn check_parents(index: usize, page: i32, list: &Vec<HashSet<i32>>, updates: &mu
 }
 
 fn main() {
-    let input = fs::read_to_string("/Users/kargupta8/Desktop/advent-of-code/2024/dec-5/src/input2.txt").unwrap();
+    let input = fs::read_to_string("src/input2.txt").unwrap();
     let sections = input.split("\n\n").collect::<Vec<&str>>();
     let rules = sections[0].split("\n").collect::<Vec<&str>>();
     let section_one = rules.iter().map(|x| x.split("|").collect::<Vec<&str>>()).collect::<Vec<Vec<&str>>>();
