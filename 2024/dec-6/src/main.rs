@@ -8,7 +8,7 @@ fn check_extreme(x: isize, y: isize, x_max: usize, y_max: usize) -> bool {
     return false;
 }
 fn main() {
-    let input = fs::read_to_string("/Users/kargupta8/Desktop/advent-of-code/2024/dec-6/src/input2.txt").unwrap();
+    let input = fs::read_to_string("src/input2.txt").unwrap();
     let dir: [(isize, isize); 4] = [(-1, 0), (0, 1), (1, 0), (0, -1)];
     let mut lab = input.lines().map(|row| row.char_indices().map(|(i, c)| (c)).collect::<Vec<_>>()).collect::<Vec<_>>();
     let mut mark = vec![vec![0; lab[0].len()]; lab.len()];
